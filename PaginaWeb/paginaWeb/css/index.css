@@ -5,6 +5,14 @@
     font-family: sans-serif;
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Previene el desbordamiento horizontal */
+    background-color: #ffff;
+}
+
 @keyframes slideDown {
     0% {
         opacity: 0;
@@ -19,16 +27,8 @@
     }
 }
 
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
-    /* Previene el desbordamiento horizontal */
-    background-color: #ced3d8;
-}
-
 header {
-    position: sticky;
+    position: fixed;
     /* Fija el header en su posición */
     top: 0;
     /* Lo coloca en la parte superior de la ventana */
@@ -37,7 +37,7 @@ header {
     /* Asegura que ocupe todo el ancho de la pantalla */
     z-index: 10;
     /* Garantiza que esté por encima de otros elementos */
-    height: 13vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,10 +53,11 @@ header {
     /* Centrado vertical */
     justify-content: center;
     /* Centrado horizontal */
+    width: 30%;
     min-width: 230px;
-    max-width: 280px;
+    max-width: 30vh;
     height: 100%;
-    background: linear-gradient(to right, #00274df5, 70%, #003467f5);
+    background: linear-gradient(to right, #00274df5, 70%, #003467ea);
     /* background-color: #00274d;*/
 }
 
@@ -95,7 +96,7 @@ header {
 }
 
 .nav-list li a {
-    font-size: 19px;
+    font-size: 17px;
     text-decoration: none;
     font-weight: bold;
     color: white;
@@ -140,8 +141,34 @@ header {
     display: none;
 }
 
+.INICIO {
+    display: flex;
+    margin-top: 5%;
+    height: 80%;
+    width: 100%;
+}
+
+.parteIzqInicio {
+    width: 50%;
+}
+
+.div-vison-mision {
+    display: flex;
+}
+
+.div-mision,
+.div-vision {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.div-carusel {
+    width: 50%;
+}
+
 .carousel-inner img {
-    height: 85vh;
+    height: 80vh;
     /* Limita la altura a 50% del viewport */
     object-fit: cover;
     /* Asegura que las imágenes se ajusten sin deformarse */
