@@ -5,14 +5,6 @@
     font-family: sans-serif;
 }
 
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
-    /* Previene el desbordamiento horizontal */
-    background-color: #ffff;
-}
-
 @keyframes slideDown {
     0% {
         opacity: 0;
@@ -25,6 +17,15 @@ body {
         transform: translateY(0);
         /* Llega a su posición final */
     }
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Previene el desbordamiento horizontal */
+    background-color: #ffff
+;
 }
 
 header {
