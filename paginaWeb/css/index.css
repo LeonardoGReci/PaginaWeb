@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-.div-centrado{
+.div-centrado {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -33,11 +33,12 @@ body {
     width: 100%;
     overflow-x: hidden;
     /* Previene el desbordamiento horizontal */
-    background-color: #ced3d8;
+    background-color: #ffff
+;
 }
 
 header {
-    position: sticky;
+    position: fixed;
     /* Fija el header en su posición */
     top: 0;
     /* Lo coloca en la parte superior de la ventana */
@@ -150,23 +151,34 @@ header {
     display: none;
 }
 
-
-
-.div-vison-mision{
-display: flex;
+.INICIO {
+    display: flex;
+    margin-top: 5%;
+    height: 60%;
+    width: 100%;
 }
 
-.div-mision,.div-vision{
-
-width: 50%;
-padding: 2rem;
-text-align: center;
+.parteIzqInicio {
+    width: 50%;
 }
 
+.div-vison-mision {
+    display: flex;
+}
 
+.div-mision,
+.div-vision {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.div-carusel {
+    width: 50%;
+}
 
 .carousel-inner img {
-    height: 85vh;
+    height: 60vh;
     /* Limita la altura a 50% del viewport */
     object-fit: cover;
     /* Asegura que las imágenes se ajusten sin deformarse */
