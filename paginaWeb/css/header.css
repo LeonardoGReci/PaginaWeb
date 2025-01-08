@@ -197,10 +197,12 @@ header.scrolled {
     }
 
     .nav-list {
+        margin-top: 70px;
         width: 100%;
         padding: 1rem;
         flex-direction: column;
         align-items: flex-start;
+        position: fixed;
         gap: 1.5rem;
     }
 

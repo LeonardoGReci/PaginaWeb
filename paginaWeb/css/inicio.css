@@ -8,7 +8,7 @@
 .top-inicio {
     position: relative;
     width: 100%;
-    height: 80%;
+    height: 1080px;
     overflow: hidden;
 }
 
@@ -70,89 +70,4 @@
     font-size: 1.5rem;
     margin-top: 20px;
     line-height: 1.6;
-}
-
-
-/* Contenedor de misión y visión */
-.div-vison-mision {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #ffffff, #f0f4fa);
-    max-width: 1200px;
-    margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras ligeras */
-    border: 1px solid #dce3ed; /* Bordes sutiles */
-}
-
-/* Contenedor individual para misión y visión */
-.mision,
-.vision {
-    flex: 1 1 45%;
-    padding: 20px;
-    color: #1b2a41; /* Azul marino para el texto principal */
-    text-align: left;
-    font-family: "Inter", sans-serif;
-}
-
-/* Estilo de los encabezados */
-.mision h3,
-.vision h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #274c77; /* Azul intermedio */
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border-bottom: 3px solid #1b2a41; /* Línea decorativa en azul marino */
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Estilo del texto */
-.mision p,
-.vision p {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 300;
-    color: #4a5568; /* Gris oscuro para contraste */
-    margin-top: 0;
-}
-
-/* Animación al cargar */
-.mision,
-.vision {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-/* Animación */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .div-vison-mision {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .mision,
-    .vision {
-        flex: 1 1 100%;
-        text-align: center; /* Centrado en móviles */
-    }
-
-    .mision h3,
-    .vision h3 {
-        text-align: center;
-    }
 }
