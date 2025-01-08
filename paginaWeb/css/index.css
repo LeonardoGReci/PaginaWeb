@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 html,
@@ -13,146 +12,74 @@ body {
     background-color: whitesmoke;
 }
 
-/*Esto es lo que susede cuando ya estas en modo mobile*/
-@media screen and (max-width:940px) {
-
-    .carousel-inner img {
-        height: 50vh;
-        /* Limita la altura a 50% del viewport */
-    }
-
-    .carousel-indicators {
-        z-index: 1;
-        /* Menor que el z-index del menú (1050) */
-    }
-
-    .cerrar-menu,
-    .abrir-menu {
-        display: block;
-        border: 0;
-        font-size: 2rem;
-        background-color: transparent;
-        cursor: pointer;
-        color: white;
-        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
-    }
-
-    .abrir-menu {
-        padding: 2rem;
-    }
-
-    .divLogo {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        /* Usa space-between para poner el logo y la X a los extremos */
-        gap: 1rem;
-        /* Ajusta el espacio entre los elementos */
-        background-color: #25323f;
-        /* Color de fondo */
-        height: 90px;
-        /* Esto hace que ocupe el 30% de la altura del contenedor .nav */
-        width: 100%;
-        /* Hace que ocupe todo el ancho del contenedor */
-        padding: 1rem;
-        /* Espaciado interno */
-    }
-
-    /*Este es el div que esta la izquerda con el logo e icono de tibsa*/
-    .logo-header {
-        min-width: 250px;
-        max-width: 250px;
-    }
-
-    .logo-nav {
-        display: block;
-        max-width: 5rem;
-        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
-    }
-
-    .nav {
-        overflow-y: auto;
-        /* Permite desplazamiento vertical */
-        overflow-x: hidden;
-        /* Previene desplazamiento horizontal */
-        max-height: 100vh;
-        /* Limita la altura al tamaño de la ventana */
-        padding-bottom: 1rem;
-        /* Añade espacio al final */
-    }
-
-    .nav {
+@keyframes slideDown {
+    0% {
         opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 55%;
-        background-color: #3b5065;
-        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .8);
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        z-index: 100;
+        transform: translateY(-50px);
+        /* Inicia fuera de la pantalla */
     }
 
-    .nav.visible {
+    100% {
         opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
+        transform: translateY(0);
+        /* Llega a su posición final */
     }
+}
 
-    .nav-list {
-        width: 100%;
-        padding: 1rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
+.carousel-inner img {
+    height: 70vh;
+    /* Limita la altura a 50% del viewport */
+    object-fit: cover;
+    /* Asegura que las imágenes se ajusten sin deformarse */
+}
 
-    .nav-list li {
-        width: 100%;
-        border-bottom: 1px solid white;
-        padding: 8px 0;
-    }
 
-    .nav-list li a {
-        display: flex;
-        font-weight: normal;
-        /* Habilita el modelo de caja flexible */
-        justify-content: space-between;
-        /* Separa el texto y el ícono */
-        align-items: center;
-        /* Alinea verticalmente el texto y el ícono */
-        color: white;
-        width: 100%;
-        /* Asegura que ocupe todo el ancho del contenedor */
-    }
+.carousel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuye el espacio verticalmente */
+    padding: 20px;
+}
 
-    .nav-list li a:hover {
-        color: #990000;
-    }
+.icono-carrusel-img-1 {
+    position: absolute;
+    top: 5%;
+    /* Ajusta para que esté dentro de la imagen */
+    left: 15%;
+    /* Centra el icono horizontalmente */
+    font-size: 100px;
+    /* Tamaño adecuado para el icono */
+    color: white;
+    /* Asegura que el icono sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
+}
 
-    .nav-list li a i {
-        opacity: 1;
-        transform: translateX(0);
-        margin-left: 8px;
-        /* Espacio entre el texto y el ícono */
-        font-size: 1.5rem;
-        /* Ajusta el tamaño del ícono si es necesario */
-        display: inline-block;
-        /* O inline, según cómo quieras que se muestre el icono */
-        justify-content: space-between;
-        /* Si deseas separar el icono del texto */
-    }
+.Titulo-carrusel-img-1 {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bold;
+    color: white;
+    /* Asegura que el texto sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
+}
 
-    .nav-list li a::after {
-        content: none;
-        /* Elimina el subrayado animado */
-    }
-
+.Texto-carrusel-img-1 {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    max-width: 50%;
+    text-align: justify;
+    color: white;
+    /* Asegura que el texto sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
 }

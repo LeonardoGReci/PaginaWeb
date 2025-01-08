@@ -1,124 +1,158 @@
-.top-inicio{
+.INICIO {
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+    width: 100%;
+}
+/* Contenedor principal */
+.top-inicio {
     position: relative;
     width: 100%;
-    height: 70hv;
+    height: 80%;
+    overflow: hidden;
 }
 
+/* Imagen de fondo */
 .top-inicio img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.texto-inicio{
     position: absolute;
-    top: 45%;
-    left: 2%;
-    color: white;
-    font-family: "Helvetica", sans-serif;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    background: linear-gradient(to right, #00274df5, 70%, #003f7e00);
+    top: 0;
+    left: 0;
+    filter: brightness(0.85); /* Oscurece un poco para mejorar la visibilidad del texto */
+    z-index: 0;
 }
 
-.INICIO {
-    display: flex;
-    margin-top: 90px;
-    height: 100%;
-    width: 100%;
-    background-color: #752217;
-}
-
-.div-inicio-top{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    color: aliceblue;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    background-color: #30577f;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-}
-
-
-.div-vison-mision {
-    height: 100%;
-    display: flex;
-    text-align: center;
-}
-
-.div-mision,
-.div-vision {
-    width: 50%;
-    padding: 2rem;
-    text-align: center;
-    background-color: #50677f;
-}
-
-.parteIzqInicio {
-    width: 40%;
-}
-
-.div-carusel {
-    width: 60%;
-}
-
-.carousel-inner img {
-    height: 70vh;
-    /* Limita la altura a 50% del viewport */
-    object-fit: cover;
-    /* Asegura que las imágenes se ajusten sin deformarse */
-}
-
-
-.carousel-content {
+/* Degradado superpuesto */
+.top-inicio::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Distribuye el espacio verticalmente */
-    padding: 20px;
+    background: linear-gradient(to right,#00274df5,#003f7e00);
+    z-index: 1;
 }
 
-.icono-carrusel-img-1 {
+/* Texto superpuesto */
+.texto-inicio {
     position: absolute;
-    top: 5%;
-    /* Ajusta para que esté dentro de la imagen */
-    left: 15%;
-    /* Centra el icono horizontalmente */
-    font-size: 100px;
-    /* Tamaño adecuado para el icono */
-    color: white;
-    /* Asegura que el icono sea visible */
+    top: 30%;
+    left: 5%;
+    color: whitesmoke;
+    font-family: "Helvetica", sans-serif;
+    text-align: left;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Sombra más oscura para contraste */
     animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
 }
 
-.Titulo-carrusel-img-1 {
-    position: absolute;
-    top: 25%;
-    left: 15%;
+/* Título principal */
+.texto-inicio h1 {
+    font-size: 2.5rem;
     font-weight: bold;
-    color: white;
-    /* Asegura que el texto sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
+    margin: 0;
+    letter-spacing: 1px;
 }
 
-.Texto-carrusel-img-1 {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-    max-width: 50%;
-    text-align: justify;
-    color: white;
-    /* Asegura que el texto sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
+/* Subtítulo */
+.texto-inicio h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: 400;
+    color: whitesmoke; /* Azul claro */
+}
+
+/* Descripción */
+.texto-inicio p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+
+/* Contenedor de misión y visión */
+.div-vison-mision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f4fa);
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras ligeras */
+    border: 1px solid #dce3ed; /* Bordes sutiles */
+}
+
+/* Contenedor individual para misión y visión */
+.mision,
+.vision {
+    flex: 1 1 45%;
+    padding: 20px;
+    color: #1b2a41; /* Azul marino para el texto principal */
+    text-align: left;
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilo de los encabezados */
+.mision h3,
+.vision h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #274c77; /* Azul intermedio */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #1b2a41; /* Línea decorativa en azul marino */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Estilo del texto */
+.mision p,
+.vision p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #4a5568; /* Gris oscuro para contraste */
+    margin-top: 0;
+}
+
+/* Animación al cargar */
+.mision,
+.vision {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .div-vison-mision {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mision,
+    .vision {
+        flex: 1 1 100%;
+        text-align: center; /* Centrado en móviles */
+    }
+
+    .mision h3,
+    .vision h3 {
+        text-align: center;
+    }
 }

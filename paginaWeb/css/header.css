@@ -1,17 +1,3 @@
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-        /* Inicia fuera de la pantalla */
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        /* Llega a su posición final */
-    }
-}
-
 header {
     position: fixed;
     /* Fija el header en su posición */
@@ -22,14 +8,22 @@ header {
     /* Asegura que ocupe todo el ancho de la pantalla */
     z-index: 10;
     /* Garantiza que esté por encima de otros elementos */
-    height: 90px;
+    height: 60px;
     /*este es elque se encarga de la altura de la barra*/
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    background-color: #003f7eee;
+    background-color: #003f7e00;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+header.scrolled {
+    background-color: #003f7ee7; /* Cambia a un color sólido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Agrega una sombra para enfatizar */
+}
+
 
 /*Este es el div que esta la izquerda con el logo e icono de tibsa*/
 .logo-header {
@@ -43,7 +37,7 @@ header {
     min-width: 230px;
     max-width: 30vh;
     height: 100%;
-    background: linear-gradient(to right, #00274df5, 70%, #003f7eee);
+    background: linear-gradient(to right, #00274d00, 70%, #003f7e00);
     /* background-color: #00274d;*/
 }
 
@@ -55,7 +49,7 @@ header {
 }
 
 .logo-icon {
-    max-width: 4rem;
+    max-width: 3.5rem;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
     /* Sombra que respeta la forma */
 }
@@ -67,6 +61,7 @@ header {
 .nav-list {
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     /* Espaciado uniforme */
     flex-wrap: wrap;
@@ -77,12 +72,12 @@ header {
 .nav-list li {
     flex: 1 1 auto;
     /* Los elementos se adaptan proporcionalmente */
-    text-align: left;
+    text-align: center;
     /* Centra el texto en cada elemento */
 }
 
 .nav-list li a {
-    font-size: 17px;
+    font-size: 15px;
     text-decoration: none;
     font-weight: bold;
     color: white;
@@ -125,4 +120,129 @@ header {
 .logo-nav,
 .cerrar-menu {
     display: none;
+}
+
+
+
+/*Esto es lo que susede cuando ya estas en modo mobile*/
+@media screen and (max-width:940px) {
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .cerrar-menu,
+    .abrir-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
+    }
+
+    .abrir-menu {
+        padding: 2rem;
+    }
+
+    .divLogo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* Usa space-between para poner el logo y la X a los extremos */
+        gap: 1rem;
+        /* Ajusta el espacio entre los elementos */
+        background-color: #25323f;
+        /* Color de fondo */
+        height: 60px;
+        /* Esto hace que ocupe el 30% de la altura del contenedor .nav */
+        width: 100%;
+        /* Hace que ocupe todo el ancho del contenedor */
+        padding: 1rem;
+        /* Espaciado interno */
+    }
+
+    /*Este es el div que esta la izquerda con el logo e icono de tibsa*/
+    .logo-header {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .logo-nav {
+        display: block;
+        max-width: 5rem;
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 55%;
+        background-color: #3b5065;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .8);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 100;
+    }
+
+    .nav-list {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+        border-bottom: 1px solid white;
+        padding: 8px 0;
+    }
+
+    .nav-list li a {
+        display: flex;
+        font-weight: normal;
+        /* Habilita el modelo de caja flexible */
+        justify-content: space-between;
+        /* Separa el texto y el ícono */
+        align-items: center;
+        /* Alinea verticalmente el texto y el ícono */
+        color: white;
+        width: 100%;
+        /* Asegura que ocupe todo el ancho del contenedor */
+    }
+
+    .nav-list li a:hover {
+        color: #990000;
+    }
+
+    .nav-list li a i {
+        opacity: 1;
+        transform: translateX(0);
+        margin-left: 8px;
+        /* Espacio entre el texto y el ícono */
+        font-size: 1.5rem;
+        /* Ajusta el tamaño del ícono si es necesario */
+        display: inline-block;
+        /* O inline, según cómo quieras que se muestre el icono */
+        justify-content: space-between;
+        /* Si deseas separar el icono del texto */
+    }
+
+    .nav-list li a::after {
+        content: none;
+        /* Elimina el subrayado animado */
+    }
+
 }
