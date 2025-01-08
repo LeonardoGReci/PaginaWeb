@@ -5,110 +5,12 @@
     font-family: sans-serif;
 }
 
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-        /* Inicia fuera de la pantalla */
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        /* Llega a su posición final */
-    }
-}
-
 html,
 body {
     width: 100%;
     overflow-x: hidden;
     /* Previene el desbordamiento horizontal */
-    background-color: #ffff;
-}
-
-.INICIO {
-    display: flex;
-    margin-top: 5%;
-    height: 80%;
-    width: 100%;
-}
-
-.parteIzqInicio {
-    width: 50%;
-}
-
-.div-vison-mision {
-    display: flex;
-}
-
-.div-mision,
-.div-vision {
-    width: 50%;
-    padding: 2rem;
-    text-align: center;
-}
-
-.div-carusel {
-    width: 50%;
-}
-
-.carousel-inner img {
-    height: 80vh;
-    /* Limita la altura a 50% del viewport */
-    object-fit: cover;
-    /* Asegura que las imágenes se ajusten sin deformarse */
-}
-
-
-.carousel-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Distribuye el espacio verticalmente */
-    padding: 20px;
-}
-
-.icono-carrusel-img-1 {
-    position: absolute;
-    top: 5%;
-    /* Ajusta para que esté dentro de la imagen */
-    left: 15%;
-    /* Centra el icono horizontalmente */
-    font-size: 100px;
-    /* Tamaño adecuado para el icono */
-    color: white;
-    /* Asegura que el icono sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
-}
-
-.Titulo-carrusel-img-1 {
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    font-weight: bold;
-    color: white;
-    /* Asegura que el texto sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
-}
-
-.Texto-carrusel-img-1 {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-    max-width: 50%;
-    text-align: justify;
-    color: white;
-    /* Asegura que el texto sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
+    background-color: whitesmoke;
 }
 
 /*Esto es lo que susede cuando ya estas en modo mobile*/
@@ -148,7 +50,7 @@ body {
         /* Ajusta el espacio entre los elementos */
         background-color: #25323f;
         /* Color de fondo */
-        height: 13%;
+        height: 90px;
         /* Esto hace que ocupe el 30% de la altura del contenedor .nav */
         width: 100%;
         /* Hace que ocupe todo el ancho del contenedor */
@@ -160,7 +62,6 @@ body {
     .logo-header {
         min-width: 250px;
         max-width: 250px;
-        width: 40%;
     }
 
     .logo-nav {

@@ -1,0 +1,123 @@
+.top-inicio{
+    position: relative;
+    width: 100%;
+    height: 70hv;
+}
+
+.top-inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-inicio{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: white;
+    font-family: "Helvetica", sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.INICIO {
+    display: flex;
+    margin-top: 90px;
+    height: 100%;
+    width: 100%;
+    background-color: #752217;
+}
+
+.div-inicio-top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background-color: #30577f;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+
+.div-vison-mision {
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.div-mision,
+.div-vision {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #50677f;
+}
+
+.parteIzqInicio {
+    width: 40%;
+}
+
+.div-carusel {
+    width: 60%;
+}
+
+.carousel-inner img {
+    height: 70vh;
+    /* Limita la altura a 50% del viewport */
+    object-fit: cover;
+    /* Asegura que las imágenes se ajusten sin deformarse */
+}
+
+
+.carousel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuye el espacio verticalmente */
+    padding: 20px;
+}
+
+.icono-carrusel-img-1 {
+    position: absolute;
+    top: 5%;
+    /* Ajusta para que esté dentro de la imagen */
+    left: 15%;
+    /* Centra el icono horizontalmente */
+    font-size: 100px;
+    /* Tamaño adecuado para el icono */
+    color: white;
+    /* Asegura que el icono sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
+}
+
+.Titulo-carrusel-img-1 {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bold;
+    color: white;
+    /* Asegura que el texto sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
+}
+
+.Texto-carrusel-img-1 {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    max-width: 50%;
+    text-align: justify;
+    color: white;
+    /* Asegura que el texto sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
+}

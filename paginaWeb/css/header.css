@@ -1,3 +1,17 @@
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        /* Inicia fuera de la pantalla */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Llega a su posición final */
+    }
+}
+
 header {
     position: fixed;
     /* Fija el header en su posición */
@@ -8,12 +22,13 @@ header {
     /* Asegura que ocupe todo el ancho de la pantalla */
     z-index: 10;
     /* Garantiza que esté por encima de otros elementos */
-    height: 10vh;
+    height: 90px;
+    /*este es elque se encarga de la altura de la barra*/
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
-    background-color: #003467fa;
+    background-color: #003f7eee;
 }
 
 /*Este es el div que esta la izquerda con el logo e icono de tibsa*/
@@ -28,7 +43,7 @@ header {
     min-width: 230px;
     max-width: 30vh;
     height: 100%;
-    background: linear-gradient(to right, #00274df5, 70%, #003467ea);
+    background: linear-gradient(to right, #00274df5, 70%, #003f7eee);
     /* background-color: #00274d;*/
 }
 
