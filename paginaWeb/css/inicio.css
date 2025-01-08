@@ -12,12 +12,13 @@
 
 .texto-inicio{
     position: absolute;
-    top: 20%;
-    left: 5%;
+    top: 45%;
+    left: 2%;
     color: white;
     font-family: "Helvetica", sans-serif;
-    text-align: center;
+    text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, #00274df5, 70%, #003f7e00);
 }
 
 .INICIO {
