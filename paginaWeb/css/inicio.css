@@ -1,9 +1,10 @@
 .INICIO {
     display: flex;
     flex-direction: column;
-    height: 1100px;
+    height: 1200px;
     width: 100%;
 }
+
 /* Contenedor principal */
 .top-inicio {
     position: relative;
@@ -15,12 +16,13 @@
 /* Imagen de fondo */
 .top-inicio img {
     width: 100%;
-    height: 100%;
+    height: 1080px;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    filter: brightness(0.85); /* Oscurece un poco para mejorar la visibilidad del texto */
+    filter: brightness(0.85);
+    /* Oscurece un poco para mejorar la visibilidad del texto */
     z-index: 0;
 }
 
@@ -32,20 +34,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right,#00274df5,#003f7e00);
+    background: linear-gradient(to right, #00274de5, #003f7e00);
     z-index: 1;
 }
 
 /* Texto superpuesto */
 .texto-inicio {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 5%;
-    color: whitesmoke;
+    color: white;
     font-family: "Helvetica", sans-serif;
     text-align: left;
     z-index: 2;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Sombra más oscura para contraste */
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    /* Sombra más oscura para contraste */
     animation: slideDown 1s ease-in-out;
 }
 
@@ -57,17 +60,51 @@
     letter-spacing: 1px;
 }
 
-/* Subtítulo */
-.texto-inicio h2 {
-    font-size: 2rem;
-    margin-top: 10px;
-    font-weight: 400;
-    color: whitesmoke; /* Azul claro */
-}
-
 /* Descripción */
 .texto-inicio p {
     font-size: 1.5rem;
     margin-top: 20px;
     line-height: 1.6;
+}
+
+.btn-ver-mas-inicio{
+    background-color: rgb(255, 254, 254);
+    align-items: center;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.btn-ver-mas-inicio p {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 1rem;
+    margin-top: 100px;
+    line-height: 1.6;
+
+}
+
+.btn-ver-mas-inicio p:hover{
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+
+
+.div-mision-vison {
+    display: flex;
+    background-color: #000e1dec;
+}
+
+.mision,
+.vision {
+    background-color: #001325ec;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.icons-inicio {
+    font-size: 100px;
 }

@@ -20,7 +20,7 @@ header {
 
 
 header.scrolled {
-    background-color: #003f7ee7; /* Cambia a un color sólido */
+    background-color: #00274dee; /* Cambia a un color sólido */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Agrega una sombra para enfatizar */
 }
 
@@ -193,6 +193,7 @@ header.scrolled {
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .8);
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        overflow: hidden;
         z-index: 100;
     }
 
