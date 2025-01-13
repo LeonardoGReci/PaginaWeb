@@ -1,3 +1,60 @@
+/* Define la animación */
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.2);
+        /* Escala inicial */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Escala final */
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        /* Inicia fuera de la pantalla */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Llega a su posición final */
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+        /* Empieza desde la izquierda fuera de la pantalla */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Llega a su posición original */
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        /* Empieza desde la derecha fuera de la pantalla */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Llega a su posición original */
+    }
+}
+
+
+
 .INICIO {
     display: flex;
     flex-direction: column;
@@ -9,21 +66,48 @@
 .top-inicio {
     position: relative;
     width: 100%;
-    height: 1080px;
+    height: 70%;
     overflow: hidden;
 }
 
 /* Imagen de fondo */
-.top-inicio img {
+.top-inicio .fondo {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     filter: brightness(0.85);
-    /* Oscurece un poco para mejorar la visibilidad del texto */
     z-index: 0;
+
+    /* Aplica la animación */
+    animation: zoomOut 5s ease-in-out forwards;
+}
+
+.logo-inicio {
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 2rem;
+    top: 15%;
+    left: 3%;
+    z-index: 3;
+    animation: slideDown 1s ease-in-out;
+}
+
+.icon-tibsa-inicio {
+    width: 228px;
+    height: 190px;
+
+}
+
+.logo-tibsa-inicio {
+    width: 322px;
+    height: 92px;
+
 }
 
 /* Degradado superpuesto */
@@ -34,15 +118,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #00274de5, #003f7e00);
+    background: linear-gradient(to bottom, #00274de5, 5%, #ffffff00);
     z-index: 1;
 }
 
 /* Texto superpuesto */
 .texto-inicio {
     position: absolute;
-    top: 35%;
-    left: 5%;
+    top: 36%;
+    left: 3%;
     color: white;
     font-family: "Helvetica", sans-serif;
     text-align: left;
@@ -54,6 +138,7 @@
 
 /* Título principal */
 .texto-inicio h1 {
+    color: white;
     font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
@@ -62,49 +147,146 @@
 
 /* Descripción */
 .texto-inicio p {
+    color: white;
     font-size: 1.5rem;
     margin-top: 20px;
     line-height: 1.6;
 }
 
-.btn-ver-mas-inicio{
+.btn-ver-mas-inicio {
     background-color: rgb(255, 254, 254);
     align-items: center;
-    width: 20%;
+    width: 100px;
+    margin-top: 50px;
     border-radius: 20px;
+    text-align: center;
+    /* Asegura que el contenido esté centrado */
+
+}
+
+.btn-ver-mas-inicio a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    display: block;
+    /* Asegura que el enlace ocupe todo el contenedor */
+    color: inherit;
+    /* Hereda el color del contenedor */
 }
 
 .btn-ver-mas-inicio p {
     text-align: center;
-    color: #ffffff;
+    color: #00274d;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-size: 1rem;
-    margin-top: 100px;
     line-height: 1.6;
 
 }
 
-.btn-ver-mas-inicio p:hover{
-    color: white;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+.btn-ver-mas-inicio:hover {
+    background-color: #ffffffb7;
+
 }
 
 
-
 .div-mision-vison {
+    height: 30%;
     display: flex;
-    background-color: #000e1dec;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #001a33, #000e1d);
+    padding: 30px;
+    gap: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .mision,
 .vision {
-    background-color: #001325ec;
-    font-weight: bold;
-    width: 50%;
-    text-align: center;
-    color: #ffffff;
+    opacity: 0;
+    /* Hace que el div sea invisible */
+    visibility: hidden;
+    /* No ocupa espacio en el layout hasta que sea visible */
+    height: 100%;
+    display: flex;
+    background-color: white;
+    color: #000000;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #002244;
+    /* Borde definido para mayor contraste */
 }
 
-.icons-inicio {
-    font-size: 100px;
+.animation-visible {
+    opacity: 1;  /* Aparece suavemente */
+    visibility: visible;  /* Hace que el div ocupe espacio en el layout */
+    animation: slideFromLeft 1.5s ease-out forwards;
+    /* Agrega animación cuando el elemento es visible */
+}
+
+.mision:hover,
+.vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.div-imagen-mision,
+.div-imagen-vision {
+    width: 50%;
+    height: 100%;
+}
+
+
+.imagen-vision,
+.imagen-mision {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.txt-vision,
+.txt-mision {
+    padding-top: 30px;
+    padding-left: 30px;
+    text-align: left;
+    width: 50%;
+    height: 100%;
+}
+
+.mision h3,
+.vision h3 {
+    padding-top: 5%;
+    font-size: 1.6rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    /* Necesario para posicionar el ::after */
+}
+
+.mision h3::after,
+.vision h3::after {
+    content: "";
+    display: block;
+    width: 50%;
+    /* Ajusta el ancho de la línea */
+    height: 3px;
+    /* Ajusta el grosor de la línea */
+    margin-top: 1%;
+    background-color: #00274de5;
+    /* Color de la línea */
+    border-radius: 2px;
+    /* Opcional, para suavizar los bordes de la línea */
+}
+
+.mision p,
+.vision p {
+
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    width: 80%;
+    color: #000000;
+    text-align: justify;
+    /* Justifica el texto */
 }

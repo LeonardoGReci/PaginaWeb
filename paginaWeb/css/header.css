@@ -1,3 +1,26 @@
+/* Keyframes para la animación de entrada */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%); /* Comienza fuera del contenedor */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Termina en su posición original */
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0); /* Comienza en su posición original */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%); /* Se desliza hacia afuera */
+    }
+}
+
 header {
     position: fixed;
     /* Fija el header en su posición */
@@ -13,32 +36,62 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Espacio equilibrado */
     color: white;
     background-color: #003f7e00;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 1s ease forwards; /* Aplica una animación de salida */
 }
 
+/* Opcional: animación al desaparecer */
+.logo-header:not(.scrolled) {
+    animation: slideOut 0.6s ease forwards; /* Aplica una animación de salida */
+}
 
+/* Estilo cuando el usuario hace scroll */
 header.scrolled {
-    background-color: #00274dee; /* Cambia a un color sólido */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Agrega una sombra para enfatizar */
+    background-color: #00274dee;
+    /* Cambia a un color sólido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra para enfatizar */
 }
 
+/* Mostrar logo-header al hacer scroll */
+.logo-header.scrolled {
+    width: 30%;
+    min-width: 230px;
+    max-width: 30vh;
+    opacity: 1;
+    visibility: visible;
+    transition: width 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    /* Transición suave para ancho, opacidad y visibilidad */
+    animation: slideIn 0.6s ease forwards; /* Aplica la animación al aparecer */
+}
 
-/*Este es el div que esta la izquerda con el logo e icono de tibsa*/
+/* Estado inicial del logo-header */
 .logo-header {
+    opacity: 0;
+    visibility: hidden;
     display: flex;
     /* Activa Flexbox */
     align-items: center;
     /* Centrado vertical */
     justify-content: center;
     /* Centrado horizontal */
-    width: 30%;
-    min-width: 230px;
-    max-width: 30vh;
+    width: 0;
     height: 100%;
-    background: linear-gradient(to right, #00274d00, 70%, #003f7e00);
-    /* background-color: #00274d;*/
+    background: linear-gradient(to right, #00274d, 70%, #003f7e00);
+    transition: width 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    /* Transición suave para todos los cambios */
+}
+
+
+/* Animación adicional para un efecto más fluido */
+.logo-header.scrolled:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    /* Pequeña escala al pasar el mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo {
@@ -55,7 +108,11 @@ header.scrolled {
 }
 
 .nav {
-    margin: 0 auto;
+    display: flex;
+    flex: 1;
+    /* Ocupa el espacio restante */
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-list {
@@ -66,7 +123,11 @@ header.scrolled {
     /* Espaciado uniforme */
     flex-wrap: wrap;
     /* Permite que los elementos se ajusten a múltiples líneas si es necesario */
-    gap: 1.5rem;
+    gap: 2rem;
+    margin: 0;
+    /* Elimina márgenes */
+    padding: 0;
+    /* Elimina relleno */
 }
 
 .nav-list li {
@@ -127,6 +188,40 @@ header.scrolled {
 /*Esto es lo que susede cuando ya estas en modo mobile*/
 @media screen and (max-width:940px) {
 
+    header{
+        animation: none; /* Sin animaciones */
+    }
+
+    .nav {
+        /* Invalida las propiedades de desktop */
+        display: none;
+        /* Oculta el menú por defecto en mobile */
+        flex: unset;
+        /* Remueve la distribución flexible */
+        justify-content: unset;
+        /* Remueve la alineación del centro */
+        align-items: unset;
+
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        background-color: #3b5065;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .8);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+
     .nav.visible {
         opacity: 1;
         visibility: visible;
@@ -148,22 +243,26 @@ header.scrolled {
         padding: 2rem;
     }
 
+
     .divLogo {
         display: flex;
+        position: absolute;
         align-items: center;
+        /* Alinea al inicio del eje vertical */
         justify-content: space-between;
-        /* Usa space-between para poner el logo y la X a los extremos */
+        /* Asegura espacio entre elementos */
         gap: 1rem;
-        /* Ajusta el espacio entre los elementos */
         background-color: #25323f;
-        /* Color de fondo */
-        height: 60px;
-        /* Esto hace que ocupe el 30% de la altura del contenedor .nav */
+        padding: 0.5rem 1rem;
+        /* Reduce relleno vertical */
         width: 100%;
-        /* Hace que ocupe todo el ancho del contenedor */
-        padding: 1rem;
-        /* Espaciado interno */
+        height: auto;
+        /* Permite que la altura se ajuste al contenido */
+        margin: 0;
+        /* Elimina cualquier margen */
+        box-sizing: border-box;
     }
+
 
     /*Este es el div que esta la izquerda con el logo e icono de tibsa*/
     .logo-header {
@@ -188,7 +287,7 @@ header.scrolled {
         top: 0;
         right: 0;
         bottom: 0;
-        width: 55%;
+        width: 70;
         background-color: #3b5065;
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .8);
         transform: translateX(100%);
@@ -198,6 +297,7 @@ header.scrolled {
     }
 
     .nav-list {
+        height: 100hv;
         margin-top: 70px;
         width: 100%;
         padding: 1rem;
@@ -205,6 +305,7 @@ header.scrolled {
         align-items: flex-start;
         position: fixed;
         gap: 1.5rem;
+        z-index: 101;
     }
 
     .nav-list li {
