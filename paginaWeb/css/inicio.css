@@ -55,7 +55,7 @@
 
 
 
-.INICIO {
+.inicio {
     display: flex;
     flex-direction: column;
     height: 1200px;
@@ -216,8 +216,10 @@
 }
 
 .animation-visible {
-    opacity: 1;  /* Aparece suavemente */
-    visibility: visible;  /* Hace que el div ocupe espacio en el layout */
+    opacity: 1;
+    /* Aparece suavemente */
+    visibility: visible;
+    /* Hace que el div ocupe espacio en el layout */
     animation: slideFromLeft 1.5s ease-out forwards;
     /* Agrega animación cuando el elemento es visible */
 }
@@ -282,11 +284,86 @@
 .mision p,
 .vision p {
 
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.8;
     width: 80%;
     color: #000000;
     text-align: justify;
     /* Justifica el texto */
+}
+
+
+@media  screen and (max-width:550px) {
+
+    .div-imagen-mision,
+    .div-imagen-vision{
+        width: 0%;
+    }
+
+    .txt-mision,
+    .txt-vision{
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width:940px) {
+
+    .top-inicio {
+        height: 750px;
+        min-height: 750px;
+    }
+
+    .icon-tibsa-inicio {
+        width: 114px;
+        height: 95px;
+
+    }
+
+    .logo-tibsa-inicio {
+        width: 161px;
+        height: 46px;
+
+    }
+
+    /* Título principal */
+    .texto-inicio h1 {
+        font-size: 2rem;
+
+    }
+
+    /* Descripción */
+    .texto-inicio p {
+        font-size: 1rem;
+    }
+
+
+    .div-mision-vison {
+        height: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .vision,
+    .mision{
+    min-height: 50%;
+    }
+
+    .mision h3,
+    .vision h3 {
+        font-size: 1.1rem;
+    }
+
+    .mision h3::after,
+    .vision h3::after {
+        width: 80%;
+        /* Ajusta el ancho de la línea */
+    }
+
+    .mision p,
+    .vision p {
+        font-size: 0.7rem;
+    }
+
 }

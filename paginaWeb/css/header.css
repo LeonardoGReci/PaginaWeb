@@ -31,7 +31,7 @@ header {
     /* Asegura que ocupe todo el ancho de la pantalla */
     z-index: 10;
     /* Garantiza que esté por encima de otros elementos */
-    height: 60px;
+    height: 70px;
     /*este es elque se encarga de la altura de la barra*/
     display: flex;
     align-items: center;
@@ -297,14 +297,13 @@ header.scrolled {
     }
 
     .nav-list {
-        height: 100hv;
         margin-top: 70px;
         width: 100%;
         padding: 1rem;
         flex-direction: column;
         align-items: flex-start;
         position: fixed;
-        gap: 1.5rem;
+        gap: 1rem;
         z-index: 101;
     }
 
