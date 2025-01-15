@@ -58,7 +58,7 @@
 .inicio {
     display: flex;
     flex-direction: column;
-    height: 1200px;
+    height: 1560px;
     width: 100%;
 }
 
@@ -66,7 +66,8 @@
 .top-inicio {
     position: relative;
     width: 100%;
-    height: 70%;
+    height: 840px;
+    min-height: 840px;
     overflow: hidden;
 }
 
@@ -188,10 +189,60 @@
 }
 
 
-.div-mision-vison {
-    height: 30%;
+
+.mid-inicio {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    height: 250px;
+  min-height: 250px;
+    background: linear-gradient(135deg, #001a33, #000e1d);
+
+}
+
+/**esta es la configuracion del icono del mid de inicio, el escudo*/
+.mid-inicio i{
+    font-size: 50px;
+    /* Tamaño adecuado para el icono */
+    color: white;
+    /* Asegura que el icono sea visible */
+    animation: slideDown 1s ease-in-out;
+    /* Aplica la animación */
+}
+
+.txt-mid-inicio {
+    margin-top: 1%;
+    align-items: center;
+    text-align: center;
+}
+
+.mid-inicio h2,
+.mid-inicio h3,
+.mid-inicio p{
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+
+.mid-inicio h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.mid-inicio h3{
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.mid-inicio p{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.div-mision-vison {
+    height: 100%;
+    display: flex;
     background: linear-gradient(135deg, #001a33, #000e1d);
     padding: 30px;
     gap: 20px;
@@ -213,6 +264,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid #002244;
     /* Borde definido para mayor contraste */
+    overflow: hidden;
 }
 
 .animation-visible {
@@ -251,6 +303,7 @@
     padding-left: 30px;
     text-align: left;
     width: 50%;
+    min-width: 220px;
     height: 100%;
 }
 
@@ -270,7 +323,7 @@
 .vision h3::after {
     content: "";
     display: block;
-    width: 50%;
+    width: 150px;
     /* Ajusta el ancho de la línea */
     height: 3px;
     /* Ajusta el grosor de la línea */
@@ -287,29 +340,14 @@
     font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.8;
-    width: 80%;
+    width: 90%;
     color: #000000;
     text-align: justify;
     /* Justifica el texto */
 }
 
+@media screen and (max-width:550px) {
 
-@media  screen and (max-width:550px) {
-
-    .div-imagen-mision,
-    .div-imagen-vision{
-        width: 0%;
-    }
-
-    .txt-mision,
-    .txt-vision{
-        width: 100%;
-    }
-
-    
-}
-
-@media screen and (max-width:940px) {
 
     .top-inicio {
         height: 750px;
@@ -339,15 +377,27 @@
         font-size: 1rem;
     }
 
+    .div-imagen-mision,
+    .div-imagen-vision {
+        width: 0%;
+    }
+
+    .txt-mision,
+    .txt-vision {
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 100%;
+    }
 
     .div-mision-vison {
         height: 100%;
         flex-wrap: nowrap;
         flex-direction: column;
     }
+
     .vision,
-    .mision{
-    min-height: 50%;
+    .mision {
+        min-height: 50%;
     }
 
     .mision h3,
@@ -355,15 +405,11 @@
         font-size: 1.1rem;
     }
 
-    .mision h3::after,
-    .vision h3::after {
-        width: 80%;
-        /* Ajusta el ancho de la línea */
-    }
 
     .mision p,
     .vision p {
-        font-size: 0.7rem;
+        width: 90%;
+        font-size: 0.8rem;
     }
 
 }
