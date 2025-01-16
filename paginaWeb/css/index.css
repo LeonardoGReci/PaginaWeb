@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Helvetica";
 }
 
 html,
@@ -11,62 +11,4 @@ body {
     /* Previene el desbordamiento horizontal */
     background-color: whitesmoke;
     scroll-behavior: smooth;
-}
-
-.carousel-inner img {
-    height: 70vh;
-    /* Limita la altura a 50% del viewport */
-    object-fit: cover;
-    /* Asegura que las imágenes se ajusten sin deformarse */
-}
-
-
-.carousel-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Distribuye el espacio verticalmente */
-    padding: 20px;
-}
-
-.icono-carrusel-img-1 {
-    position: absolute;
-    top: 5%;
-    /* Ajusta para que esté dentro de la imagen */
-    left: 15%;
-    /* Centra el icono horizontalmente */
-    font-size: 100px;
-    /* Tamaño adecuado para el icono */
-    color: white;
-    /* Asegura que el icono sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
-}
-
-.Titulo-carrusel-img-1 {
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    font-weight: bold;
-    color: white;
-    /* Asegura que el texto sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
-}
-
-.Texto-carrusel-img-1 {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-    max-width: 50%;
-    text-align: justify;
-    color: white;
-    /* Asegura que el texto sea visible */
-    animation: slideDown 1s ease-in-out;
-    /* Aplica la animación */
 }

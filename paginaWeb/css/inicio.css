@@ -193,15 +193,19 @@
 .mid-inicio {
     display: flex;
     justify-content: center;
-    height: 250px;
-  min-height: 250px;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+  min-height: 300px;
     background: linear-gradient(135deg, #001a33, #000e1d);
 
 }
 
+
 /**esta es la configuracion del icono del mid de inicio, el escudo*/
 .mid-inicio i{
-    font-size: 50px;
+    margin-top: 1%;
+    font-size: 60px;
     /* Tamaño adecuado para el icono */
     color: white;
     /* Asegura que el icono sea visible */
@@ -209,36 +213,35 @@
     /* Aplica la animación */
 }
 
+.logo-mid-inicio{
+margin-top: 1%;
+    filter: brightness(0) invert(1) ;
+}
+
+
+
 .txt-mid-inicio {
     margin-top: 1%;
     align-items: center;
     text-align: center;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 .mid-inicio h2,
 .mid-inicio h3,
 .mid-inicio p{
     color: white;
-    margin: 0;
-    letter-spacing: 1px;
 }
 
 
 .mid-inicio h2{
-    font-weight: bold;
     font-size: 2rem;
 }
 
 .mid-inicio h3{
-    margin-top: 20px;
-    font-size: 1.5rem;
+    margin-top: 15px;
+    font-size: 1.4rem;
 }
-
-.mid-inicio p{
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
 
 .div-mision-vison {
     height: 100%;
@@ -311,7 +314,6 @@
 .vision h3 {
     padding-top: 5%;
     font-size: 1.6rem;
-    font-family: 'Arial', sans-serif;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -337,8 +339,7 @@
 .mision p,
 .vision p {
 
-    font-size: 0.9rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     line-height: 1.8;
     width: 90%;
     color: #000000;

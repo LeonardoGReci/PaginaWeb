@@ -37,7 +37,7 @@ window.addEventListener("scroll", () => {
 
 
 // Selecciona el elemento a observar
-const elementos = document.querySelectorAll('.mision, .vision');
+const elementos = document.querySelectorAll('.mision, .vision, .logo-mid-inicio, .txt-mid-inicio');
 
 // Función que se ejecuta cuando el elemento entra en la vista
 const onIntersection = (entries, observer) => {
@@ -51,7 +51,7 @@ const onIntersection = (entries, observer) => {
 
 // Crea un Intersection Observer
 const observer = new IntersectionObserver(onIntersection, {
-  threshold: 0.2 // Define que el 50% del elemento debe estar en la vista para activar la animación
+  threshold: 0.1 // Define que el 50% del elemento debe estar en la vista para activar la animación
 });
 
 // Empieza a observar cada elemento
