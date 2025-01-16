@@ -81,7 +81,6 @@
     left: 0;
     filter: brightness(0.85);
     z-index: 0;
-
     /* Aplica la animación */
     animation: zoomOut 5s ease-in-out forwards;
 }
@@ -129,7 +128,7 @@
     top: 36%;
     left: 3%;
     color: white;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Helvetica";
     text-align: left;
     z-index: 2;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
@@ -196,26 +195,32 @@
     align-items: center;
     flex-direction: column;
     height: 300px;
-  min-height: 300px;
-    background: linear-gradient(135deg, #001a33, #000e1d);
+    min-height: 300px;
+    background-image: url(C:/Users/leogo/Residencias/PaginaWeb/paginaWeb/img/carretera-carretera-Felix-Haumann.jpeg);
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Ajusta la imagen para que cubra todo el div */
+    background-position: center;
+    /* Centra la imagen en el div */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
 
 }
 
 
 /**esta es la configuracion del icono del mid de inicio, el escudo*/
-.mid-inicio i{
+.icono-mid-inicio {
     margin-top: 1%;
-    font-size: 60px;
-    /* Tamaño adecuado para el icono */
-    color: white;
-    /* Asegura que el icono sea visible */
+    width: 103px;
+    height: 86px;
+    filter: brightness(0) invert(1);
     animation: slideDown 1s ease-in-out;
     /* Aplica la animación */
 }
 
-.logo-mid-inicio{
-margin-top: 1%;
-    filter: brightness(0) invert(1) ;
+.logo-mid-inicio {
+    margin-top: 1%;
+    filter: brightness(0) invert(1);
 }
 
 
@@ -228,17 +233,18 @@ margin-top: 1%;
 }
 
 .mid-inicio h2,
-.mid-inicio h3,
-.mid-inicio p{
+.mid-inicio h3 {
+    font-weight: normal;
+    /* Elimina la negrita */
     color: white;
 }
 
 
-.mid-inicio h2{
+.mid-inicio h2 {
     font-size: 2rem;
 }
 
-.mid-inicio h3{
+.mid-inicio h3 {
     margin-top: 15px;
     font-size: 1.4rem;
 }
