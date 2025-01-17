@@ -37,7 +37,7 @@ window.addEventListener("scroll", () => {
 
 
 // Selecciona el elemento a observar
-const elementos = document.querySelectorAll('.mision, .vision, .logo-mid-inicio, .txt-mid-inicio');
+const elementos = document.querySelectorAll('.mision, .vision, .icono-mid-inicio, .logo-mid-inicio, .txt-mid-inicio');
 
 // Función que se ejecuta cuando el elemento entra en la vista
 const onIntersection = (entries, observer) => {

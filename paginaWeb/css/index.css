@@ -11,4 +11,5 @@ body {
     /* Previene el desbordamiento horizontal */
     background-color: whitesmoke;
     scroll-behavior: smooth;
+    
 }
