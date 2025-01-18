@@ -51,7 +51,7 @@ header {
 
 /* Estilo cuando el usuario hace scroll */
 header.scrolled {
-    background-color: #00274dee;
+    background-color: #00274df6;
     /* Cambia a un color sólido */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     /* Agrega una sombra para enfatizar */

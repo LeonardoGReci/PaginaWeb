@@ -58,3 +58,27 @@ const observer = new IntersectionObserver(onIntersection, {
 elementos.forEach(elemento => {
   observer.observe(elemento);
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".opciones-menu-servicios button");
+  const infoContainer = document.querySelector(".container-inf-servicios");
+
+  buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+          // Obtén el texto del atributo data-info y la imagen del atributo data-bg
+          const info = button.getAttribute("data-info");
+          const bgImage = button.getAttribute("data-bg");
+
+          // Cambia el contenido del div de información
+          infoContainer.innerHTML = `
+              <h2>${button.textContent}</h2>
+              <p>${info}</p>
+          `;
+
+          // Cambia la imagen de fondo del div
+          infoContainer.style.backgroundImage = `url('${bgImage}')`;
+      });
+  });
+});

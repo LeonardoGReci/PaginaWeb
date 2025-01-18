@@ -39,42 +39,16 @@
     }
 }
 
-@keyframes slideFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-        /* Empieza desde la derecha fuera de la pantalla */
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        /* Llega a su posición original */
-    }
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Animación de rotación del fondo */
 @keyframes rotateBackground {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
-
 
 
 .inicio {
@@ -88,8 +62,8 @@
 .top-inicio {
     position: relative;
     width: 100%;
-    height: 840px;
-    min-height: 840px;
+    height: 800px;
+    min-height: 800px;
     overflow: hidden;
 }
 
@@ -101,7 +75,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    filter: brightness(0.85);
     z-index: 0;
     /* Aplica la animación */
     animation: zoomOut 5s ease-in-out forwards;
@@ -114,21 +87,21 @@
     align-items: center;
     position: absolute;
     gap: 2rem;
-    top: 15%;
+    top: 20%;
     left: 3%;
     z-index: 3;
     animation: slideDown 1s ease-in-out;
 }
 
 .icon-tibsa-inicio {
-    width: 228px;
-    height: 190px;
+    width: 200px;
+    height: auto;
 
 }
 
 .logo-tibsa-inicio {
-    width: 322px;
-    height: 92px;
+    width: 300px;
+    height: auto;
 
 }
 
@@ -140,20 +113,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #00274de5, 5%, #ffffff00);
+    background: linear-gradient(to bottom, #00274de5, 10%, #ffffff00);
     z-index: 1;
 }
 
 /* Texto superpuesto */
 .texto-inicio {
     position: absolute;
-    top: 36%;
+    top: 40%;
     left: 3%;
     color: white;
-    font-family: "Helvetica";
     text-align: left;
-    z-index: 2;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    z-index: 2;
     /* Sombra más oscura para contraste */
     animation: slideDown 1s ease-in-out;
 }
@@ -161,8 +133,7 @@
 /* Título principal */
 .texto-inicio h1 {
     color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2rem;
     margin: 0;
     letter-spacing: 1px;
 }
@@ -178,7 +149,7 @@
 .btn-ver-mas-inicio {
     background-color: rgb(255, 254, 254);
     align-items: center;
-    width: 100px;
+    width: 120px;
     margin-top: 50px;
     border-radius: 20px;
     text-align: center;
@@ -191,24 +162,26 @@
     /* Elimina el subrayado */
     display: block;
     /* Asegura que el enlace ocupe todo el contenedor */
-    color: inherit;
-    /* Hereda el color del contenedor */
 }
 
 .btn-ver-mas-inicio p {
+    text-shadow: none;
     text-align: center;
     color: #00274d;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-weight: bold;
     font-size: 1rem;
     line-height: 1.6;
+}
 
+.btn-ver-mas-inicio p:hover {
+    color: white;
 }
 
 .btn-ver-mas-inicio:hover {
-    background-color: #ffffffb7;
+    background-color: #00274dc1;
+
 
 }
-
 
 
 .mid-inicio {
@@ -218,12 +191,14 @@
     align-items: center;
     height: 300px;
     min-height: 300px;
-    background: linear-gradient(135deg, #001a33, #000e1d); /* Degradado más dinámico */
+    background: linear-gradient(135deg, #001a33, #000e1d);
+    /* Degradado más dinámico */
     padding: 20px;
-    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.7); /* Iluminación interna */
     text-align: center;
-    overflow: hidden; /* Oculta cualquier exceso visual */
-    position: relative; /* Para efectos decorativos */
+    overflow: hidden;
+    /* Oculta cualquier exceso visual */
+    position: relative;
+    /* Para efectos decorativos */
 }
 
 /* Detalle animado en el fondo */
@@ -239,18 +214,20 @@
     z-index: 0;
 }
 
+
 .icono-mid-inicio {
-    margin-top: 1%;
-    width: 103px;
-    height: 86px;
+    width: 90px;
+    height: auto;
     filter: brightness(0) invert(1);
-    z-index: 1; /* Asegura que el ícono esté por encima del fondo */
+    z-index: 1;
+    /* Asegura que el ícono esté por encima del fondo */
 }
 
 .logo-mid-inicio {
-    margin-top: 10px;
+    margin-top: 15px;
     filter: brightness(0) invert(1);
-    width: 150px; /* Ajusta según el diseño */
+    width: 140px;
+    /* Ajusta según el diseño */
     height: auto;
     z-index: 1;
 }
@@ -266,14 +243,15 @@
 }
 
 .mid-inicio h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     line-height: 1.5;
-    letter-spacing: 1px; /* Más separación entre letras */
+    letter-spacing: 1px;
+    /* Más separación entre letras */
 }
 
 .mid-inicio h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-top: 15px;
     letter-spacing: 0.5px;
     font-weight: normal;
@@ -284,80 +262,53 @@
     height: 100%;
     display: flex;
     background: linear-gradient(135deg, #001a33, #000e1d);
-    padding: 30px;
-    gap: 20px;
-    position: relative; /* Necesario para que ::before esté relacionado con este contenedor */
-    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.7); /* Iluminación interna */
-    overflow: hidden; /* Evita que el efecto de ::before se desborde fuera del contenedor */
-}
-
-/* Efecto decorativo */
-.div-mision-vison::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
-    z-index: 0; /* Coloca el efecto detrás del contenido */
+    overflow: visible;
+    position: relative;
+    /* Necesario para que ::before esté relacionado con este contenedor */
 }
 
 .mision,
 .vision {
-    opacity: 0;
-    /* Hace que el div sea invisible */
-    visibility: hidden;
-    /* No ocupa espacio en el layout hasta que sea visible */
     height: 100%;
     display: flex;
-    background-color: white;
-    color: #000000;
+    background-color: #00274d;
     flex: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid #002244;
-    /* Borde definido para mayor contraste */
-    overflow: hidden;
+    overflow: visible;
+    /* Asegúrate de no ocultar el crecimiento */
 }
-
-.animation-visible {
-    opacity: 1;
-    /* Aparece suavemente */
-    visibility: visible;
-    /* Hace que el div ocupe espacio en el layout */
-    animation: slideFromLeft 1.5s ease-out forwards;
-    /* Agrega animación cuando el elemento es visible */
-}
-
-.mision:hover,
-.vision:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-
 
 .div-imagen-mision,
 .div-imagen-vision {
-    width: 50%;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    /* Asegura que esté detrás del texto */
 }
-
 
 .imagen-vision,
 .imagen-mision {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.4);
 }
 
 .txt-vision,
 .txt-mision {
-    padding-top: 30px;
-    padding-left: 30px;
+    position: relative;
+    /* Asegura que el texto esté delante de la imagen */
+    padding: 60px;
     text-align: left;
-    width: 50%;
+    color: white;
+    /* Asegúrate de que el texto sea legible sobre la imagen */
+    width: 100%;
     min-width: 220px;
     height: 100%;
+    z-index: 1;
+    /* Coloca el texto sobre la imagen */
 }
 
 .mision h3,
@@ -380,7 +331,7 @@
     height: 3px;
     /* Ajusta el grosor de la línea */
     margin-top: 1%;
-    background-color: #00274de5;
+    background-color: #ffffff;
     /* Color de la línea */
     border-radius: 2px;
     /* Opcional, para suavizar los bordes de la línea */
@@ -388,13 +339,22 @@
 
 .mision p,
 .vision p {
-
-    font-size: 1rem;
-    line-height: 1.8;
-    width: 90%;
-    color: #000000;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 100%;
+    color: #fffefe;
     text-align: justify;
     /* Justifica el texto */
+}
+
+
+.animation-visible {
+    opacity: 1;
+    /* Aparece suavemente */
+    visibility: visible;
+    /* Hace que el div ocupe espacio en el layout */
+    animation: slideFromLeft 1.5s ease-out forwards;
+    /* Agrega animación cuando el elemento es visible */
 }
 
 @media (prefers-reduced-motion: reduce) {
