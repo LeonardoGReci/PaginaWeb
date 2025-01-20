@@ -56,6 +56,7 @@
     flex-direction: column;
     height: 1560px;
     width: 100%;
+    overflow: hidden;
 }
 
 /* Contenedor principal */
@@ -80,6 +81,7 @@
     animation: zoomOut 5s ease-in-out forwards;
 }
 
+/*este es el div del logo en la pantalla inicio*/
 .logo-inicio {
     width: 500px;
     height: 100px;
@@ -96,13 +98,14 @@
 .icon-tibsa-inicio {
     width: 200px;
     height: auto;
+    filter: drop-shadow(5px 5px 0px #ffffff);
 
 }
 
 .logo-tibsa-inicio {
     width: 300px;
     height: auto;
-
+    filter: drop-shadow(5px 5px 1px #ffffff);
 }
 
 /* Degradado superpuesto */
@@ -133,17 +136,13 @@
 /* Título principal */
 .texto-inicio h1 {
     color: white;
-    font-size: 2rem;
     margin: 0;
-    letter-spacing: 1px;
 }
 
 /* Descripción */
 .texto-inicio p {
     color: white;
-    font-size: 1.5rem;
     margin-top: 20px;
-    line-height: 1.6;
 }
 
 .btn-ver-mas-inicio {
@@ -169,8 +168,6 @@
     text-align: center;
     color: #00274d;
     font-weight: bold;
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
 .btn-ver-mas-inicio p:hover {
@@ -243,18 +240,11 @@
 }
 
 .mid-inicio h2 {
-    font-size: 1.5rem;
     margin-bottom: 10px;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    /* Más separación entre letras */
 }
 
 .mid-inicio h3 {
-    font-size: 1.2rem;
     margin-top: 15px;
-    letter-spacing: 0.5px;
-    font-weight: normal;
     /* Elimina la negrita */
 }
 
@@ -262,7 +252,7 @@
     height: 100%;
     display: flex;
     background: linear-gradient(135deg, #001a33, #000e1d);
-    overflow: visible;
+    overflow: hidden;
     position: relative;
     /* Necesario para que ::before esté relacionado con este contenedor */
 }
@@ -274,8 +264,6 @@
     background-color: #00274d;
     flex: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    overflow: visible;
-    /* Asegúrate de no ocultar el crecimiento */
 }
 
 .div-imagen-mision,
@@ -314,10 +302,8 @@
 .mision h3,
 .vision h3 {
     padding-top: 5%;
-    font-size: 1.6rem;
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
     position: relative;
     /* Necesario para posicionar el ::after */
 }
@@ -339,8 +325,6 @@
 
 .mision p,
 .vision p {
-    font-size: 1.2rem;
-    line-height: 1.5;
     width: 100%;
     color: #fffefe;
     text-align: justify;
