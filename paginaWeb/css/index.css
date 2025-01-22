@@ -35,14 +35,18 @@ h3 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
 @media screen and (max-width:550px) {
 
+    .texto-inicio p {
+        font-size: 0.9rem;
+    }
+
     h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     h2 {

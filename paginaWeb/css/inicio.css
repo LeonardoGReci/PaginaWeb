@@ -77,7 +77,7 @@
     top: 0;
     left: 0;
     z-index: 0;
-    filter: brightness(0.45);
+    filter: brightness(0.7);
     /* Aplica la animación */
     animation: zoomOut 5s ease-in-out forwards;
 }
@@ -113,12 +113,13 @@
 /* Texto superpuesto */
 .texto-inicio {
     position: absolute;
-    width: 70%;
+    width: 90%;
+    max-width: 1000px;
     top: 40%;
     left: 3%;
     color: white;
     text-align: justify;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
     z-index: 2;
     /* Sombra más oscura para contraste */
     animation: slideDown 1s ease-in-out;
@@ -126,13 +127,13 @@
 
 /* Título principal */
 .texto-inicio h1 {
-    color: white;
+    font-weight: bold;
     margin: 0;
 }
 
 /* Descripción */
 .texto-inicio p {
-    color: white;
+    font-size: 1.3rem;
     margin-top: 20px;
 }
 
@@ -199,7 +200,7 @@
     width: 200%;
     height: 200%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
-    animation: rotateBackground 30s linear 5;
+    animation: rotateBackground 30s linear 7;
     z-index: 0;
 }
 
@@ -333,6 +334,8 @@
     /* Agrega animación cuando el elemento es visible */
 }
 
+
+/*esto es para desactivar las animaciones en modo mobile si el usuario tienen prefers-reduced-motion*/
 @media (prefers-reduced-motion: reduce) {
     .mid-inicio::before {
         animation: none;
@@ -341,27 +344,38 @@
 
 @media screen and (max-width:550px) {
 
-
     .top-inicio {
         height: 790px;
         min-height: 790px;
     }
 
+    .logo-inicio {
+        gap: 1rem;
+    }
+
     .icon-tibsa-inicio {
-        width: 114px;
-        height: 95px;
+        width: 130px;
+        height: auto;
 
     }
 
 
     .logo-tibsa-inicio {
-        width: 161px;
-        height: 46px;
+        width: 175px;
+        height: auto;
 
     }
     
     .texto-inicio {
         width: 90%;
+    }
+
+    .texto-inicio h1{
+        text-align: center;
+    }
+
+    .texto-inicio p {
+        font-size: 1rem;
     }
 
 
@@ -379,6 +393,10 @@
 
     .mid-inicio::before {
         animation:none;
+    }
+
+    .div-mision-vison {
+       margin: auto;
     }
     
     .mision,
