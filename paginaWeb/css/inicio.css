@@ -54,17 +54,18 @@
 .inicio {
     display: flex;
     flex-direction: column;
-    height: 1600px;
+    height: 1720px;
     width: 100%;
     overflow: hidden;
+    box-shadow: 3px 3px 2px black;
 }
 
 /* Contenedor principal */
 .top-inicio {
     position: relative;
     width: 100%;
-    height: 850px;
-    min-height: 850px;
+    height: 100vh;
+    min-height: 900px;
     overflow: hidden;
 }
 
@@ -179,8 +180,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    min-height: 350px;
+    height: 400px;
+    min-height: 400px;
     background: linear-gradient(135deg, #001a33, #000e1d);
     /* Degradado más dinámico */
     padding: 20px;
