@@ -1,9 +1,8 @@
 .container-servicios {
-    background-color: white;
+    background-color: whitesmoke;
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     width: 100%;
     height: 1500px;
     overflow: hidden;
@@ -11,10 +10,12 @@
 }
 
 .txt-servicios {
-    margin-top: 20px;
-    width: 60%;
-    height: 350px;
-    justify-items: center;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -31,16 +32,17 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
 }
 
 .carta {
     display: flex;
+    flex-direction: column;
     cursor: pointer;
     max-width: 30%;
     min-width: 350px;
-    height: 250px;
+    height: 400px;
     border: 1px solid black;
     border-radius: 15px;
     position: relative;
@@ -48,33 +50,30 @@
     transition: transform 0.3s ease, opacity 0.6s ease;
 }
 
-.div-img-carta{
+.div-img-carta {
     width: 100%;
-    height: 100%;
+    height: 60%;
     object-fit: cover;
-    position: absolute;
-    z-index: 0;
     /* Asegura que esté detrás del texto */
 }
 
-.img-carta{
+.img-carta {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4);
+
 }
 
-.txt-carta{
+.txt-carta {
 
     padding: 20px;
-    position: relative;
     /* Asegura que el texto esté delante de la imagen */
     text-align: left;
-    color: white;
+    color: rgb(0, 0, 0);
     /* Asegúrate de que el texto sea legible sobre la imagen */
     width: 100%;
     min-width: 220px;
-    height: 100%;
+    height: 40%;
     z-index: 1;
 }
 
@@ -90,4 +89,121 @@
     padding: 20px;
     color: black;
     background-color: aqua;
+}
+
+
+
+.prueba {
+    background-color: whitesmoke;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+
+}
+
+
+.carta-uno {
+    display: flex;
+    max-width: 450px;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 3px 3px 2px black;
+    transition: transform 0.3s ease, opacity 0.6s ease;
+}
+
+.carta-uno::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 200px 200px;
+    border-color: #2D5C88 transparent;
+
+}
+
+
+.txt-carta-uno {
+    padding: 20px;
+    /* Asegura que el texto esté delante de la imagen */
+    text-align: left;
+    color: #00213f;
+    /* Asegúrate de que el texto sea legible sobre la imagen */
+    width: 70%;
+    height: 100%;
+}
+
+.txt-carta-uno ul {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.div-gif {
+    margin: 20px;
+    width: 40%;
+    height: 40%;
+}
+
+
+
+.carta-dos {
+    max-width: 320px;
+    height: 400px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 3px 3px 2px black;
+    transition: transform 0.3s ease, opacity 0.6s ease;
+}
+
+.div-dos {
+    width: 100%;
+    height: 60%;
+}
+
+.img-carta-dos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+
+.div-texto-prueba {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-color: #93B9DD;
+    text-align: center;
+}
+
+.div-texto-prueba::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #93B9DD;
+    border-radius: 50% 50% 0 0;
+
+}
+
+.txt-carta-dos h3 {
+    color: #10385E;
+}
+
+.txt-carta-dos p {
+    columns: #000000;
+    padding: 20px;
 }
