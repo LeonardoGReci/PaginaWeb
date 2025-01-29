@@ -232,12 +232,8 @@
     z-index: 1;
 }
 
-.mid-inicio h2 {
-    margin-bottom: 10px;
-}
-
 .mid-inicio h3 {
-    margin-top: 15px;
+    margin: 15px;
     /* Elimina la negrita */
 }
 
@@ -345,8 +341,8 @@
 @media screen and (max-width:550px) {
 
     .top-inicio {
-        height: 790px;
-        min-height: 790px;
+        height: 700px;
+        min-height: 700px;
     }
 
     .logo-inicio {
@@ -365,13 +361,18 @@
         height: auto;
 
     }
-    
+
     .texto-inicio {
         width: 90%;
     }
 
-    .texto-inicio h1{
+    .texto-inicio h1 {
         text-align: center;
+    }
+
+    .texto-inicio h4 {
+        margin-top: 20px;
+        text-align: justify;
     }
 
     .texto-inicio p {
@@ -384,7 +385,7 @@
         height: auto;
         /* Asegura que el ícono esté por encima del fondo */
     }
-    
+
     .logo-mid-inicio {
         width: 110px;
         /* Ajusta según el diseño */
@@ -392,13 +393,13 @@
     }
 
     .mid-inicio::before {
-        animation:none;
+        animation: none;
     }
 
     .div-mision-vison {
-       margin: auto;
+        margin: auto;
     }
-    
+
     .mision,
     .vision {
         background-color: #ffffff;
@@ -407,7 +408,7 @@
     .div-imagen-mision,
     .div-imagen-vision {
         display: none;
-        
+
     }
 
     .txt-mision,
