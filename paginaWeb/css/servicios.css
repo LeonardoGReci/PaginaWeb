@@ -10,7 +10,7 @@
     /* Espacio entre texto y tarjetas */
 }
 .icon-aniversario{
-    width: 100px;
+    width: 120px;
     height: auto;
 }
 
@@ -31,7 +31,6 @@
     justify-content: center;
     gap: 40px;
     /* Espacio entre tarjetas */
-
     width: 100%;
     padding: 0 20px;
 }
