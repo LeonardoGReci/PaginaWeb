@@ -9,6 +9,11 @@
     gap: 50px;
     /* Espacio entre texto y tarjetas */
 }
+
+
+.top-servicios{
+    justify-items: center;
+}
 .icon-aniversario{
     width: 120px;
     height: auto;
@@ -114,7 +119,7 @@
 
 
 
-.Nosotros {
+.nosotros {
     padding: 20px;
     color: black;
     background-color: aqua;
