@@ -58,3 +58,27 @@ const observer = new IntersectionObserver(onIntersection, {
 elementos.forEach(elemento => {
   observer.observe(elemento);
 });
+
+
+// Espera a que el documento se cargue completamente
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Agrega evento a los enlaces "Ver Más" para mostrar la información adicional
+  document.querySelectorAll(".ver-mas").forEach(function (enlace) {
+      enlace.addEventListener("click", function (e) {
+          e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+          let info = this.closest(".div-texto-carta").querySelector(".info-adicional");
+          info.style.display = "block"; // Muestra la información adicional
+      });
+  });
+
+  // Agrega evento a los botones "Cerrar" para ocultar la información adicional
+  document.querySelectorAll(".cerrar-info").forEach(function (boton) {
+      boton.addEventListener("click", function (e) {
+          e.preventDefault();
+          let info = this.closest(".info-adicional");
+          info.style.display = "none"; // Oculta la información adicional
+      });
+  });
+
+});

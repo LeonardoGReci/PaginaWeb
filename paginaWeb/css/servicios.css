@@ -117,7 +117,33 @@
     margin-bottom: 5px;
 }
 
+.info-adicional {
+    display: none;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 280px;
+    text-align: left;
+    z-index: 10;
+}
 
+.info-adicional ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.info-adicional a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
 
 .nosotros {
     padding: 20px;
