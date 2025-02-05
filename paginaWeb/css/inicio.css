@@ -242,6 +242,7 @@
 .div-mision-vison {
     height: 100%;
     display: flex;
+    justify-content: center;
     background: linear-gradient(135deg, #001a33, #000e1d);
     overflow: hidden;
     position: relative;
@@ -251,6 +252,7 @@
 .mision,
 .vision {
     height: 100%;
+    max-width: 960px;
     display: flex;
     background-color: #00274d;
     flex: 1;

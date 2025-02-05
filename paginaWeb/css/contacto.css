@@ -1,0 +1,19 @@
+.container-contacto {
+    background-color: #f8f9fa;
+    /* Fondo limpio y profesional */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 900px;
+}
+
+
+.div-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    color: #002b5c;
+}
